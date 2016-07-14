@@ -2,14 +2,32 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>Dart</title>
   </head>
-  <body>
-    <h1>Hello World!</h1>
+  <body ng-app="starter" ng-controller="AppCtrl">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="bower_components/angularbknd-sdk/dist/backand.min.js"></script>
+    <script src="js/app.js"></script>
+
     <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+   <!-- <script>document.write(process.versions.node)</script>,
+    <script>document.write(process.versions.chrome)</script>,
+    <script>document.write(process.versions.electron)</script>. -->
+
+
+    <div class="item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="text" placeholder="New Todo" ng-model="input.name">
+        </label>
+        <button class="button button-balanced button-small" ng-click="addTodo()">
+          +
+        </button>
+    </div>
+
+        <div ng-repeat="item in todos">
+          {{item.name}}<br>
+        </div>
+
   </body>
 
   <script>
