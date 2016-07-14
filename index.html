@@ -16,17 +16,17 @@
 
 
     <div class="item-input-inset">
-        <label class="item-input-wrapper">
+        <label class="item-input-wrapper" ng-keydown="$event.which === 13 && addTodo()">
           <input type="text" placeholder="New Todo" ng-model="input.name">
         </label>
-        <button class="button button-balanced button-small" ng-click="addTodo()">
+<!--         <button class="button button-balanced button-small" ng-click="addTodo()">
           +
-        </button>
+        </button> -->
     </div>
 
-        <div ng-repeat="item in todos">
+    <div ng-repeat="item in todos">
           {{item.name}}<br>
-        </div>
+    </div>
 
   </body>
 
